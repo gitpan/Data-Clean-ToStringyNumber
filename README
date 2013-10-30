@@ -1,0 +1,51 @@
+NAME
+    Data::Clean::ToStringyNumber - Convert non-stringy numbers in data to
+    stringy numbers
+
+SYNOPSIS
+     use Data::Clean::ToStringyNumber;
+     my $cleanser = Data::Clean::ToStringyNumber->get_cleanser;
+     my $data     = ["a", 1, "1.2", []];
+     my $cleaned  = $cleanser->clean_in_place($data); # -> ["a", "1", "1.2", []]
+
+DESCRIPTION
+    This class can convert non-stringy numbers in your data to stringy ones.
+
+METHODS
+  CLASS->get_cleanser => $obj
+    Return a singleton instance.
+
+  $obj->clean_in_place($data) => $cleaned
+    Clean $data. Modify data in-place.
+
+  $obj->clone_and_clean($data) => $cleaned
+    Clean $data. Clone $data first.
+
+SEE ALSO
+    Data::Clean::ToNonStringyNumber
+
+HOMEPAGE
+    Please visit the project's homepage at
+    <https://metacpan.org/release/Data-Clean-ToStringyNumber>.
+
+SOURCE
+    Source repository is at
+    <https://github.com/sharyanto/perl-Data-Clean-ToStringyNumber>.
+
+BUGS
+    Please report any bugs or feature requests on the bugtracker website
+    http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Clean-ToStringyNum
+    ber
+
+    When submitting a bug or request, please include a test-file or a patch
+    to an existing test-file that illustrates the bug or desired feature.
+
+AUTHOR
+    Steven Haryanto <stevenharyanto@gmail.com>
+
+COPYRIGHT AND LICENSE
+    This software is copyright (c) 2013 by Steven Haryanto.
+
+    This is free software; you can redistribute it and/or modify it under
+    the same terms as the Perl 5 programming language system itself.
+
