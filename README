@@ -2,6 +2,9 @@ NAME
     Data::Clean::ToStringyNumber - Convert non-stringy numbers in data to
     stringy numbers
 
+VERSION
+    version 0.02
+
 SYNOPSIS
      use Data::Clean::ToStringyNumber;
      my $cleanser = Data::Clean::ToStringyNumber->get_cleanser;
@@ -34,8 +37,8 @@ SOURCE
 
 BUGS
     Please report any bugs or feature requests on the bugtracker website
-    http://rt.cpan.org/Public/Dist/Display.html?Name=Data-Clean-ToStringyNum
-    ber
+    <https://rt.cpan.org/Public/Dist/Display.html?Name=Data-Clean-ToStringyN
+    umber>
 
     When submitting a bug or request, please include a test-file or a patch
     to an existing test-file that illustrates the bug or desired feature.
