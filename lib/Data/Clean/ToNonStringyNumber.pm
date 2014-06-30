@@ -4,15 +4,15 @@ use 5.010001;
 use strict;
 use warnings;
 
-our $VERSION = '0.02'; # VERSION
+our $VERSION = '0.03'; # VERSION
 
 use parent qw(Data::Clean::Base);
 
 sub command_replace_with_non_stringy_number {
-    require Scalar::Util;
+    require Scalar::Util::LooksLikeNumber;
 
     my ($self, $args) = @_;
-    return '{{var}} = Scalar::Util::looks_like_number({{var}}) =~ /\\A(?:1|5|9|13)\\z/ ? {{var}}+0 : {{var}}';
+    return '{{var}} = Scalar::Util::LooksLikeNumber::looks_like_number({{var}}) =~ /\\A(?:1|5|9|13)\\z/ ? {{var}}+0 : {{var}}';
 }
 
 sub new {
@@ -42,7 +42,7 @@ Data::Clean::ToNonStringyNumber - Convert stringy numbers in data to non-stringy
 
 =head1 VERSION
 
-version 0.02
+This document describes version 0.03 of Data::Clean::ToNonStringyNumber (from Perl distribution Data-Clean-ToStringyNumber), released on 2014-06-30.
 
 =head1 SYNOPSIS
 
@@ -97,7 +97,7 @@ Steven Haryanto <stevenharyanto@gmail.com>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Steven Haryanto.
+This software is copyright (c) 2014 by Steven Haryanto.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
